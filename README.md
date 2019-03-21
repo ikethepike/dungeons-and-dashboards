@@ -8,6 +8,8 @@ For an insight in the mayhem that we might call our _creative process_ check [he
 yarn install
 ```
 
+Copy `.env` into `.env.local` and add the needed _environmental variables_, e.g. **VUE_APP_FIREBASE_API_KEY**
+
 ### Compiles and hot-reloads for development
 
 ```
