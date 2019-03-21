@@ -1,6 +1,6 @@
 {
-  "name": "dnd",
-  "short_name": "dnd",
+  "name": "Dungeons & Dashboards",
+  "short_name": "Dungeons & Dashboards",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",
