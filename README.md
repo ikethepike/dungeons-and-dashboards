@@ -46,6 +46,16 @@ yarn run test:e2e
 yarn run test:unit
 ```
 
+## Project Policies
+
+__Feature Branching__ as a variety of features are present, and in order to better identify issues in tests, we rely on feature branching functions and fixes. Three main types:
+- feature/xx
+- fix/xx
+- update/xx
+
+
+
+
 ### Customize configuration
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
