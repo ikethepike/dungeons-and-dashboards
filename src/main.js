@@ -1,5 +1,6 @@
 import Vue from 'vue';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 import App from './App.vue';
 import router from './router';
 import store from './store';
@@ -17,7 +18,8 @@ const config = {
 };
 firebase.initializeApp(config);
 
-console.log(process.env.VUE_APP_FIREBASE_API_KEY);
+const db = firebase.firestore();
+Vue.prototype.$db = db;
 
 new Vue({
   router,
