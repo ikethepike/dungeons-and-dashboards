@@ -47,7 +47,7 @@ export default {
 
     // Let's create our die
     this.die = new THREE.Mesh(
-      new THREE.IcosahedronGeometry({ radius: 0.5 }),
+      new THREE.IcosahedronBufferGeometry(0.5),
       new THREE.MeshBasicMaterial({ color: 0xd64541 })
     );
 

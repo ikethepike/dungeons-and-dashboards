@@ -18,7 +18,8 @@ const config = {
   messagingSenderId: process.env.VUE_APP_FIREBASE_MESSAGING_SENDER_ID
 };
 
-firebase.initializeApp(config);
+// Make firebase exportable
+export const Firebase = firebase.initializeApp(config);
 
 const db = firebase.firestore();
 Vue.prototype.$db = db;
