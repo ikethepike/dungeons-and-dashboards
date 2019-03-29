@@ -1,9 +1,11 @@
-import Vue from 'vue';
-import firebase from 'firebase';
-import App from './App.vue';
-import router from './router';
-import store from './store';
-import './registerServiceWorker';
+import Vue from "vue";
+import firebase from "firebase/app";
+import "firebase/firestore";
+import App from "./App.vue";
+import IntroView from "./components/views/IntroView.vue";
+import router from "./router";
+import store from "./store";
+import "./registerServiceWorker";
 
 Vue.config.productionTip = false;
 
@@ -15,12 +17,14 @@ const config = {
   storageBucket: process.env.VUE_APP_FIREBASE_STORAGE_BUCKET,
   messagingSenderId: process.env.VUE_APP_FIREBASE_MESSAGING_SENDER_ID
 };
+
 firebase.initializeApp(config);
 
-console.log(process.env.VUE_APP_FIREBASE_API_KEY);
+const db = firebase.firestore();
+Vue.prototype.$db = db;
 
 new Vue({
   router,
   store,
-  render: h => h(App)
-}).$mount('#app');
+  render: h => h(IntroView)
+}).$mount("#app");
